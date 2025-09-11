@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Minesweeper Taser",
+  "version": "1.0",
+  "description": "Monitors minesweeperonline.com for losses",
+  "permissions": [],
+  "host_permissions": [
+    "https://minesweeperonline.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://minesweeperonline.com/*"],
+      "js": ["content-script.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

@@ -1,20 +1,11 @@
-// ==UserScript==
-// @name         Minesweeper Monitor
-// @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  Monitor minesweeper.com for losses
-// @author       You
-// @match        https://minesweeperonline.com/*
-// @grant        none
-// ==/UserScript==
-
-(function() {
+// content-script.js
+(() => {
     'use strict';
 
-    const elementSelector = '#face'; // Replace with your specific element's selector
-    const lostClassName = 'facedead'; // Replace with the class that indicates a loss
+    const elementSelector = '#face';
+    const lostClassName = 'facedead';
 
-    let targetElement = document.querySelector(elementSelector);
+    const targetElement = document.querySelector(elementSelector);
 
     if (targetElement) {
         const observer = new MutationObserver(mutations => {
@@ -42,5 +33,4 @@
             subtree: false
         });
     }
-
 })();
