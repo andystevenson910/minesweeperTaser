@@ -8,7 +8,7 @@ When you lose a Minesweeper game, the browser extension notifies a local Python 
 ## Requirements
 
 - Python 3.8+  
-- Firefox
+- Firefox 
 - Arduino board
 - Modified Stun Gun Circuit
 - Arduino IDE installed  
@@ -50,23 +50,28 @@ The server runs on [http://localhost:8080](http://localhost:8080).
 
 ---
 
-### 3. Install the Firefox Extension
+### 4. Install the Firefox Extension
+
+#### Easiest: Install From Store
+
+- Visit https://addons.mozilla.org/en-US/firefox/addon/minesweeper-taser
+- Click 'Add to Firefox'
+- Allow Permissions
+
+#### Medium: Install Firefox Extension Signed Packet
+
+- Open Firefox.  
+- Drag the `.xpi` file into the browser window.  
+- Confirm installation.  
+
+
+#### For those who lack trust: Install the Raw Firefox Extension
 
 1. Open Firefox and go to `about:debugging#/runtime/this-firefox`.  
 2. Click **"Load Temporary Add-on"**.  
 3. Select the `manifest.json` file inside the `extension/` folder.  
    - The extension will now be loaded temporarily.  
    - To make it permanent, you’ll need to use the **signed .xpi** package.  
-
----
-
-### 4. Install the Signed Add-on (.xpi) (Pending Approval)
-
-Once we add the signed package from [addons.mozilla.org](https://addons.mozilla.org), you can install it:
-
-- Open Firefox.  
-- Drag the `.xpi` file into the browser window.  
-- Confirm installation.  
 
 ---
 
